@@ -1,0 +1,47 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
+@import url(../blocks/root/root.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/logo/logo.css);
+@import url(../blocks/profile/profile.css);
+@import url(../blocks/user-info/user-info.css);
+@import url(../blocks/button/button.css);
+@import url(../blocks/places-list/places-list.css);
+@import url(../blocks/place-card/place-card.css);
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/image-popup/image-popup.css);
+
+body {
+  background-color: #000;
+}
+
+.image-popup__container {
+  position: relative;
+}
+
+.error-message {
+  display: block;
+  position: absolute;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  color: #FF3333;
+  font-size: 12px;
+  line-height: 15px;
+  transition: .3s;
+  opacity: 0;
+  padding-top: 4px;
+}
+
+.input__container_invalid .error-message {
+  opacity: 1;
+}
+
+.input__container {
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.input__container:last-of-type {
+  margin-bottom: 0px;
+}
