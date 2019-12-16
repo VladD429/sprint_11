@@ -1,3 +1,9 @@
+import "./pages/index.css";
+import API from './api.js';
+import CardList from './cardlist.js';
+import PopUp from './popup.js';
+
+/*const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort5' : 'https://praktikum.tk/cohort5';*/
 const api = new API({
   baseUrl: 'http://95.216.175.5/cohort5',
   headers: {
@@ -182,6 +188,7 @@ api.getCards()
   .catch((err) => {
     console.log(err)
   });
+
   /* Надо исправить: обработка ошибок блоком catch должна быть здесь  */
 
 
