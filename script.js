@@ -3,9 +3,9 @@ import API from './api.js';
 import CardList from './cardlist.js';
 import PopUp from './popup.js';
 
-/*const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort5' : 'https://praktikum.tk/cohort5';*/
+const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort5' : 'https://praktikum.tk/cohort5';
 const api = new API({
-  baseUrl: 'http://95.216.175.5/cohort5',
+  baseUrl: serverUrl,
   headers: {
     authorization: '6a4efc30-7d3d-4e8f-ba5d-868c10aa313e',
     'Content-Type': 'application/json'

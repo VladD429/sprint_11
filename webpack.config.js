@@ -1,9 +1,11 @@
+const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
+
 
 module.exports = {
     entry: { main: './script.js' },
@@ -36,7 +38,7 @@ module.exports = {
         {
             test: /\.(png|jpg|gif|ico|svg)$/i,
             use: [
-                 'file-loader?name=../dist__images/[name].[ext]',
+                 'file-loader?name=images/[name].[ext]',
                  {
                      loader: 'image-webpack-loader',
                      options: {
@@ -47,7 +49,7 @@ module.exports = {
             },
             {
             test: /\.(eot|ttf|woff|woff2)$/,
-            loader: 'file-loader?name=./vendor/[name].[ext]'
+            loader: 'file-loader?name=vendor/[name].[ext]'
             }
             ]
         },
@@ -69,8 +71,8 @@ module.exports = {
             filename: 'index.html'
         }),
         new WebpackMd5Hash(),
-       /* new webpack.DefinePlugin({
+        new webpack.DefinePlugin({
             'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-       })*/
+       })
     ]
 }
