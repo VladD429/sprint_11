@@ -1,4 +1,4 @@
-class PopUp {
+export default class PopUp {
   constructor(element) {
     this.element = element;
     this.close = this.close.bind(this);
